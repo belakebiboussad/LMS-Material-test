@@ -31,9 +31,35 @@
 									</span>
 					        	</div>
 					        </li>
+		 					@if ($user->profile)
+								@if ($user->profile->location)
+								    <li class="mdl-list__item mdl-typography--font-light">
+								    	<div class="mdl-list__item-primary-content" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+								    		<i class="material-icons mdl-list__item-icon">location_on</i>
+											<span itemprop="streetAddress">
+												{{ $user->profile->location }}
+											</span>
+								    	</div>
+								    </li>
+								@endif
+							@endif
                         </ul>
                     </div>
                 </div>
+					@if ($user->profile)
+						@if ($user->profile->location)
+							<div class="mdl-cell mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet mdl-cell--6-col-desktop margin-top-0 margin-top-2-desktop">
+								<div class="card-image mdl-card mdl-shadow--2dp">
+									<div id="map-canvas"></div>
+									<div class="mdl-card__actions mdl-color--primary mdl-color-text--white">
+										<p class="mdl-typography--font-light">
+											LON: <span id="longitude"></span> / LAT: <span id="latitude"></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						@endif
+					@endif
             </div>
             <div class="mdl-card__actions">
 				<div class="mdl-grid full-grid">

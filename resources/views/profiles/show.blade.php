@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-Profile {{ $user->name }}
+Profile du {{ $user->name }}
 @endsection
 @section('css')
 <style>
@@ -32,6 +32,6 @@ Profile {{ $user->name }}
 @endsection
 @section('content')
 
-@include('profile.partials.user-profile-card')
+@include('profiles.partials.user-profile-card') 
 
 @endsection

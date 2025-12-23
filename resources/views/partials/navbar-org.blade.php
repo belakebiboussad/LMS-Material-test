@@ -8,7 +8,7 @@
                 </a>
                  
             </div>
-            <div class="navbar-collapse" id="navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <!-- #END# Tasks -->
                     <li class="pull-right">

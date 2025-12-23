@@ -1,11 +1,9 @@
   @extends('layouts.app')
   @section('title', __('farm.create'))
   @section('css')
-  <style>
     #mapid {
       height: 300px;
     }
-  </style>
   @endsection
   @section('content')
   <div class="main-content position-relative bg-gray-100  h-100">

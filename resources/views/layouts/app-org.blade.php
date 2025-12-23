@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -10,8 +10,9 @@
     <title>@if (trim($__env->yieldContent('title')))@yield('title') | @endif {{ config('app.name', Lang::get('titles.app')) }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon/favicon.ico') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @include('partials.head')
-    @vite(['resources/css/app.css', 'resources/js/app.js'])    
+    
 </head>
 
 <body class="theme-light-green">
@@ -35,13 +36,7 @@
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
     <!-- #END# Overlay For Sidebars -->
-    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
     <!-- Search Bar -->
-    <div class="mdl-layout__header-row">
-     <span class="mdl-layout-title">
-         @yield('header')
-    </span>
-
     <div class="search-bar">
         <div class="search-icon">
             <i class="material-icons">search</i>
@@ -51,11 +46,8 @@
             <i class="material-icons">close</i>
         </div>
     </div>
-    </div>
     <!-- #END# Search Bar -->
     <!-- Top Bar -->
-    </header>
-
     @include('partials.navbar')
     <!-- #Top Bar -->
     <section>

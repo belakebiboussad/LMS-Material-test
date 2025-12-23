@@ -1,7 +1,7 @@
   @extends('layouts.app')
   @section('title', __('movement.create'))
   @section('css')
-  <style>
+ 
     #mapid {
       height: 300px;
     }
@@ -17,7 +17,6 @@
     padding: 0px 0px; /* Increase vertical padding to increase item height */
     line-height: 0.9 /* Adjust line height for vertical alignment */
 }
-  </style>
   @endsection
   @section('content')
   <div class="main-content position-relative bg-gray-100  h-100">

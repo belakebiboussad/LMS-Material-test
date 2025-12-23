@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\Models\Profile;
 use App\Models\Commune;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -56,6 +57,8 @@ class UserCotroller extends Controller
         $user = User::create($request->all());
         $role = $request->input('role');
         $user->assignRole($role);
+        $profile = new Profile();
+        $user->profile()->save($profile);
         return redirect()->route('users.index')->with('success', __('user.updated'));
     }
     public function update(UpdateUserRequest  $request, User $user)
