@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Sign In | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{asset('img/favicon/)}}favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
     <!-- Bootstrap Core Css -->

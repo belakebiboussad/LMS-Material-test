@@ -101,5 +101,5 @@ Route::group(['middleware' => ['auth','currentUser']], function () {
     // Route::post('avatar/upload', ['as' => 'avatar.upload', 'uses' => 'ProfilesController@upload']);
 
     // // Route to uplaod user background image
-    // Route::post('background/upload', ['as' => 'background.upload', 'uses' => 'ProfilesController@uploadBackground']);
+    Route::post('background/upload', ['as' => 'background.upload', 'uses' => 'ProfilesController@uploadBackground']);
 });

@@ -12,6 +12,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('partials.head')
     @vite(['resources/css/app.css', 'resources/js/app.js'])    
+    <style type="text/css">
+    @yield('css')
+   </style>
 </head>
 
 <body class="theme-light-green">
@@ -74,10 +77,8 @@
             @yield('content')
         </div>
     </section>
-
     @include('partials.script')
-     @yield('js')
+    @yield('js')
     @stack('scripts')
 </body>
-
 </html>

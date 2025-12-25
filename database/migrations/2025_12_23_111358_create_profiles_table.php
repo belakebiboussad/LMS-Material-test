@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('location')->nullable();
             $table->string('avatar')->nullable();
             $table->boolean('avatar_status')->default(0);
-            $table->string('user_profile_bg')->nullable()->default('/images/default-user-bg.png');
+            $table->string('user_profile_bg')->nullable()->default('/img/default-user-bg.png');
             $table->timestamps();
         });
     }

@@ -1,8 +1,17 @@
+@php
+	if ($user->profile->avatar_status == 1) {
+		$userGravImage = $user->profile->avatar;
+	} else {
+		//$userGravImage = Gravatar::get($user->email);
+		$userGravImage = gravatar($user->email, 'small');
+
+	}
+@endphp
 <div class="mdl-grid full-grid margin-top-0 padding-0">
 	<div class="mdl-cell mdl-cell mdl-cell--12-col mdl-cell--12-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop mdl-card mdl-shadow--3dp margin-top-0 padding-top-0">
 	    <div class="mdl-card card-wide" style="width:100%;" itemscope itemtype="https://schema.org/Person">
 			<div class="mdl-user-avatar">
-				<img src="" alt="{{-- $user->name --}}" class="user-avatar">
+				<img src="{{$userGravImage}}" alt="{{ $user->name }}" class="user-avatar">
 				<span itemprop="image" style="display:none;">{{ $user->email }}</span>
 			</div>
 			<div class="mdl-card__title mdl-color--primary mdl-color-text--white"> 

@@ -19,10 +19,8 @@
  
     {{-- Nucleo Icons --}}
     <link href="{{ asset('theme/css/nucleo-icons.css') }}" rel="stylesheet" />
-    <link href="{{ asset('theme/css/nucleo-svg.css') }} rel="stylesheet" />
+    <link href="{{ asset('theme/css/nucleo-svg.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/leaflet.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dropzone.min.css') }}" rel="stylesheet">
       <!-- Custom Css -->
     <link href="{{ asset('theme/css/style.css') }}" rel="stylesheet">
-    <style type="text/css">
-    @yield('css')
-   </style>

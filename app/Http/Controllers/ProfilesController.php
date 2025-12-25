@@ -10,11 +10,12 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Redirect;
+
 class ProfilesController extends Controller
 {
     public function show($username)
     {
-        try {
+       try {
             $user = $this->getUserByUsername($username);
        
   
@@ -22,7 +23,7 @@ class ProfilesController extends Controller
             abort(404);
         }
         $currentTheme = Theme::find($user->profile->theme_id);
-         $data = [
+        $data = [
             'user'         => $user,
             'currentTheme' => $currentTheme,
         ];

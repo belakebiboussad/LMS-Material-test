@@ -1,5 +1,10 @@
 <aside id="rightsidebar" class="right-sidebar">
- <ul class="mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right demo-list-icon mdl-list">
+ <div class="d-flex">
+                <button class="btn btn-sm bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark" onclick="sidebarType(this)">Dark</button>
+                <button class="btn btn-sm bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent" onclick="sidebarType(this)">Transparent</button>
+                <button class="btn btn-sm bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white" onclick="sidebarType(this)">White</button>
+</div> 
+<ul class="mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right demo-list-icon mdl-list">
     <li lass="mdl-menu__item mdl-list__item">
         <a href="/" title="{{ trans('titles.home') }}">
             <span class="mdl-list__item-primary-content">

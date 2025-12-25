@@ -31,7 +31,5 @@ Profile du {{ $user->name }}
 </style>
 @endsection
 @section('content')
-
 @include('profiles.partials.user-profile-card') 
-
 @endsection
