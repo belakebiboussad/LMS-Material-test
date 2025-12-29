@@ -74,8 +74,8 @@
 				<div class="mdl-grid full-grid">
 					<div class="mdl-cell mdl-cell--12-col">
 						    @if (Auth::user()->id == $user->id)
-								<!-- <a href="/profile/{{-- Auth::user()->name --}}/edit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--3dp mdl-button--raised mdl-button--primary mdl-color-text--white"> -->
-                                    <a href="{{ route('profile.edit') }}" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--3dp mdl-button--raised mdl-button--primary mdl-color-text--white">
+								<a href="/profile/{{ Auth::user()->username }}/edit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--3dp mdl-button--raised mdl-button--primary mdl-color-text--white">
+                                    {{-- <a href="{{ route('profile.edit') }}" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-shadow--3dp mdl-button--raised mdl-button--primary mdl-color-text--white"> --}}
 									<i class="material-icons padding-right-half-1">edit</i>
 									{{ Lang::get('app.edit_profile') }}
 								</a>

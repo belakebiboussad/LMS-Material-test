@@ -47,8 +47,8 @@
     <!-- Demo Js -->
     <script src="{{ asset('theme/js/demo.js') }}"></script>
     <script src="{{ asset('js/leaflet.js') }}"></script>
-    {{-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> --}}
     <script src="{{ asset('theme/js/material-dashboard.js') }}"></script>
     <script src="{{ asset('js/mask/jquery.inputmask.min.js') }}"></script>
     <script type='text/javascript' src="{{ asset('js/dropzone.min.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/mdl.js') }}"></script>
+     <script src="{{ asset('js/app.js') }}"></script>

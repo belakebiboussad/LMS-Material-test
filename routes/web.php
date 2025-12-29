@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
@@ -59,6 +59,7 @@ Route::middleware('auth')->group(function () {
 // Registered, activated, and is current user routes.
 Route::group(['middleware' => ['auth','currentUser']], function () {
     // User Profile and Account Routes
+    /*
     Route::resource(
         'profile',
         ProfilesController::class,
@@ -72,10 +73,14 @@ Route::group(['middleware' => ['auth','currentUser']], function () {
             ],
         ]
     );
-    // Route::put('profile/{username}/updateUserAccount', [
-    //     'as'   => '{username}',
-    //     'uses' => 'ProfilesController@updateUserAccount',
-    // ]);
+    */
+    Route::resource('profile',ProfilesController::class);
+    /* 
+    Route::PUT('profile/{username}/updateUserAccount', [
+         'as'   => '{username}',
+         'uses' => 'ProfilesController@updateUserAccount',
+     ]);
+     */
     // Route::put('profile/{username}/updateUserPassword', [
     //     'as'   => '{username}',
     //     'uses' => 'ProfilesController@updateUserPassword',

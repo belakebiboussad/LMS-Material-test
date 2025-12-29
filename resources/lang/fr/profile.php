@@ -37,7 +37,7 @@ return [
     'editProfileTitle' => 'Profile Settings',
 
     // User edit profile form
-    'label-theme' => 'Your theme:',
+    'label-theme' => 'Votre thème:',
     'ph-theme'    => 'Select your theme',
 
     'label-location' => 'Your location:',
@@ -86,7 +86,7 @@ return [
     'successUserRestore'   => 'Welcome back :username! Account Successfully Restored',
 
     // Save button
-    'submitButton'        => 'Save',
+    'submitButton'        => 'Enregistrer',
     'submitChangesButton' => 'Save Changes',
 
     // User Account

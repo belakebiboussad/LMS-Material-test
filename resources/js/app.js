@@ -1,6 +1,7 @@
 import './bootstrap';
 import Choices from 'choices.js';
 import 'choices.js/public/assets/styles/choices.min.css'; // Import the CSS
+import './mdl.js'; // Import your file
 window.Choices = Choices;
 /*
 import Dropzone from 'dropzone';
@@ -22,9 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     */
 
 });
-
-
-
 import Alpine from 'alpinejs';
 
 window.Alpine = Alpine;

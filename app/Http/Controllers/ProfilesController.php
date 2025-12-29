@@ -37,11 +37,27 @@ class ProfilesController extends Controller
     /**
      * Display the user's profile form.
      */
-    public function edit(Request $request): View
+    public function edit($username): View
     {
-        return view('profiles.edit', [
-            'user' => $request->user(),
-        ]);
+        try {
+            $user = $this->getUserByUsername($username);
+        } catch(ModelNotFoundException $exception) {
+          return view('pages.status')
+                ->with('error', trans('profile.notYourProfile'))
+                ->with('error_title', trans('profile.notYourProfileTitle'));
+        }
+        $themes = Theme::where('status', 1)
+                       ->orderBy('name', 'asc')
+                       ->get();
+        $currentTheme = Theme::find($user->profile->theme_id);
+        $data = [
+            'user'          => $user,
+            'themes'        => $themes,
+            'currentTheme'  => $currentTheme,
+
+        ];
+
+        return view('profiles.edit')->with($data);
     }
 
     /**
